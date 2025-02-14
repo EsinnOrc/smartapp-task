@@ -1,0 +1,242 @@
+{
+	"info": {
+		"_postman_id": "207dd235-35d7-4e2b-83c7-4f7d7ca0d62c",
+		"name": "SmartAppTask",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21707939"
+	},
+	"item": [
+		{
+			"name": "Kullanıcı Kayıt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/users/?name=Esin &company_name=esse&surname=ORUÇ&email=eoruc369@gmail.com&phone=555555555&password=1234567890",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Esin "
+						},
+						{
+							"key": "company_name",
+							"value": "esse"
+						},
+						{
+							"key": "surname",
+							"value": "ORUÇ"
+						},
+						{
+							"key": "email",
+							"value": "eoruc369@gmail.com"
+						},
+						{
+							"key": "phone",
+							"value": "555555555"
+						},
+						{
+							"key": "password",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı List ( ID )",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/users/11",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Arama",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\"company_name\":\"ela\",\n\"phone\":\"123456789\""
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/users/search?company_name=esse",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"search"
+					],
+					"query": [
+						{
+							"key": "company_name",
+							"value": "esse"
+						},
+						{
+							"key": "phone",
+							"value": "123456789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Silme",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/users/10",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"10"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Kullanıcı Güncelleme",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"surname\":\"ORC\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/api/users/11",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"11"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11",
+							"disabled": true
+						},
+						{
+							"key": "company_name",
+							"value": "bbbbbb",
+							"disabled": true
+						},
+						{
+							"key": "surname",
+							"value": "aaaaa",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "esse@esse.com",
+							"disabled": true
+						},
+						{
+							"key": "phone",
+							"value": "123456789",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tüm Kullancılar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/api/users",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}

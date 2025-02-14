@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run(): void
     {
        
-        $companyIds = DB::table('companies')->pluck('id');
+        $companyId = DB::table('companies')->pluck('id');
 
         for ($i = 1; $i <= 10; $i++) {
             DB::table('users')->insert([
@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'email' => 'Marry' . $i . '.Mark' . $i . '@example.com',
                 'phone' => '123456789' . $i,
                 'password' => '12345678' , 
-                'company_id' => $companyIds->random(),
+                'company_id' => $companyId->random(),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
