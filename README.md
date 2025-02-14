@@ -18,12 +18,12 @@ Bu proje, **Laravel 11** kullanılarak geliştirilmiş bir **üyelik yönetim AP
 -   **Laravel 11** ile geliştirilmiştir.
 -   **Service-Repository Pattern** kullanılmıştır.
 -   **RESTful API mimarisi** ile oluşturulmuştur.
--   **Soft Delete** yöntemiyle kullanıcıları kalıcı olarak silmeden sistemden kaldırabilirsiniz.
+-   **Soft Delete** Kullanılmıştır.
 -   **API Resource Routes** ile CRUD işlemleri desteklenmektedir.
 -   **Bir firmaya birden fazla kullanıcı bağlanabilir.**
 -   **Validation** için Laravel'in `FormRequest` sınıfı kullanılmıştır.
 -   **Postman veya herhangi bir API istemcisi ile kolayca test edilebilir.**
--   **Veritabanı dosyası (.sql) eklenmiştir ve kolayca içe aktarılabilir.**
+-   **Veritabanı dosyası (.sql) eklenmiştir.**
 -   **Public API** olduğu için **kimlik doğrulama (authorization) gerekmemektedir.**
 
 ## Kurulum Kurulumu
