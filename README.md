@@ -1,4 +1,5 @@
-# SmartApp Task - Laravel 11 API ile Üyelik Yönetim Sistemi
+# SmartApp Task
+## Laravel 11 API ile Üyelik Yönetim Sistemi
 
 Bu proje, **Laravel 11** kullanılarak geliştirilmiş bir **üyelik yönetim API'sidir**. Kullanıcılar sisteme kayıt olabilir, listelenebilir, güncellenebilir ve soft delete yöntemiyle silinebilir.
 
